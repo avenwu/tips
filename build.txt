@@ -1,0 +1,24 @@
+#Update Android project with ant build.xml
+Step1.
+#locate your project path, . means we are inside the project folder;
+android update project --path .
+
+Step2.
+#Try to build in debug, the unsigned debug apk is located in bin/
+ant debug
+
+Step3.
+#Prepare keystore for release
+keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+
+Step4.
+#Release signed apk automaticaly
+ant release
+
+############################################
+
+#adb commands
+#Select one device between muti-devices, either emulator or device
+1.adb -s emulator-5554
+#Specify to device when emulator exists
+2.adb -d 

@@ -1,0 +1,60 @@
+#Eclipse keymap on Windows
+最大化窗口:双击鼠标左键(Ctrl+M)
+
+自动提示功能:一般的关键字,都有提示内容 像syso 就是System.out.println();for 循环 等 它的快捷键是 (Alt+/)
+
+格式化代码: 有时候代码写多了 比较乱的话可以用快捷键进行格式化 (ctrl-shift-f)
+
+引入包代码: 可以快速引入包 快捷键是(Ctrl+Shift+O)
+
+生成get/set 或者 toString 等方法时 可以用快捷键 Shift+Alt+S
+
+ Line Numbers 要显示代码的行号，选择Window菜单-->Preferences -->General -->Editors -->Text Editors --> 选择 Show Line Numbers或者也可以在左缘单击鼠标右键，然后选择“显示行号”。
+
+  
+
+  改变字体和大小:点击Window -->Preferences-->General-->Appearance-->Colors and Fonts  展开Java文件夹   选择Java Editor Text Font 然后点Edit可以进行编辑
+
+  编码支持:要启用Unicode支持，选择Window -->Preferences-->General-->Workspace --> Text file encoding-->UTF-8。此设置用于文件编码的默认字符集，类似于虚拟机的命令行选项-Dfile.encoding= UTF-8。常用的字符集是Unicode的UTF-8，UTF-16（带BOM）。其他的字符集是US-ASCII，ISO-8859-1。
+
+  比较两个文件：在项目包资源中，选择两个文件（按住Ctrl键） 右键--> Compare with
+
+   
+
+   有用的Eclipse快捷键节选：
+
+   F3：转到选中的变量/方法的声明。
+
+   CTRL-SHIFT-G：搜索高亮显示的变量/方法在工作区中的所有引用。
+
+   ALT-Shift-R键：快速打开一个文件 
+
+   Ctrl+D: 删除当前行
+
+   Ctrl+Alt+↓ 复制当前行到下一行(复制增加)
+
+   Ctrl+Alt+↑ 复制当前行到上一行(复制增加)
+
+   Alt+↓ 当前行和下面一行交互位置(特别实用,可以省去先剪切,再粘贴了)
+
+   Alt+↑ 当前行和上面一行交互位置(同上)
+
+   Alt+Enter 显示当前选择资源(工程,or 文件 or文件)的属性
+
+   Ctrl+Q 定位到最后编辑的地方
+
+   Ctrl+/ 注释当前行,再按则取消注释
+
+   Ctrl+T 快速显示当前类的继承结构
+
+   Ctrl+W 关闭当前Editer
+
+   Ctrl+K 参照选中的Word快速定位到下一个
+
+   Ctrl+E 快速显示当前正在编辑文件的下拉列表(如果当前页面没有显示的用黑体表示) 
+
+   万能的修复快捷键: Ctrl+1 有时候代码会提示报错.. 有可能是包没引 有可能是别的问题.用这个快捷键可以看出问题,并修复.
+
+   有时候你想把一段代码放入for 循环,if语句 while循环,try catch 异常捕获里面的时候可以用Shift+Alt+Z 
+
+
