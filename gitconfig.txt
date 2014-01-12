@@ -1,0 +1,21 @@
+[user]
+name = Chaobin Wu
+email = iamavenwu@gmail.com
+
+[alias]
+ci = commit
+co = comment
+st = status
+br = branch
+lg = log --name-status
+
+[color]
+status = auto
+ui = auto
+diff = auto
+branch = auto
+interactive = auto
+
+[core]
+autocrlf = input
+
