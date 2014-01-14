@@ -1,0 +1,38 @@
+OSX
+1.Rename重命名
+alt + command + r
+
+2.Open resource打开资源
+command + shift + r
+
+Open type打开接口文件
+command + shift + t
+
+3.Find/Replace查找、替换
+command + f
+
+全局搜索
+ctrl + h
+
+4.Format code 格式化代码
+shift + command + f
+
+5.organize import自动导包
+shift + command + o
+
+6.Extra method提取方法
+alt + command + m
+
+7.Insert line after插入下一行
+shift + enter
+
+Insert line before插入上一行
+shift + command + enter
+
+8.Next error/trigger suggessions下一个错误/快速提示
+command + .
+command + 1
+
+9.All hotkey所有快捷键
+shift + command + l
+
