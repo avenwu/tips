@@ -1,0 +1,18 @@
+#1.Delete remote branch 删除远程分支
+git push origin --delete <branchName>
+git push origin :<branchName>
+
+#2.Delete remote tag 删除远程tag
+#--delete supported after git v1.7.0
+git push origin --detele tag <tagName>
+git push origin :refs/tags/<tagName>
+
+#3.Push to remote branch推送到远程分支
+#-u and :remoteBranchName are optional
+git push origin -u localBranchName
+git push origin -u localBranchName:remoteBranchName
+
+#4.Create local tag and push to remote
+git tag tagName
+git push origin tagName
+
