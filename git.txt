@@ -16,3 +16,9 @@ git push origin -u localBranchName:remoteBranchName
 git tag tagName
 git push origin tagName
 
+#5.Diff between branches
+git diff master..branch
+git log master..branch
+git shortlog master..branch
+#only show files changes without detail
+git diff --name-status master..branch
