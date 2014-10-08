@@ -22,3 +22,10 @@ git log master..branch
 git shortlog master..branch
 #only show files changes without detail
 git diff --name-status master..branch
+
+#6.Clean all history commits
+git checkout --orphan newBranch
+git add -A  # Add all files and commit them
+git commit
+git branch -D master  # Deletes the master branch
+git branch -m master  # Rename the current branch to master
