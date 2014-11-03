@@ -29,3 +29,6 @@ git add -A  # Add all files and commit them
 git commit
 git branch -D master  # Deletes the master branch
 git branch -m master  # Rename the current branch to master
+
+#7. merge with branch, ignore the branch commits
+git merge --squash xbranch
