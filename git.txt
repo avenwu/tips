@@ -22,3 +22,10 @@ git log master..branch
 git shortlog master..branch
 #only show files changes without detail
 git diff --name-status master..branch
+#6.Merge branch with no history commits
+git checkout master
+git merge --squash bugfix
+#7.add more remote url
+git remote add new_origin_name git@bitbucket.org:avenwu/project_name.git
+git push -u new_origin_name --all # pushes up the repo and its refs for the first time
+git push -u new_origin_name --tags # pushes up any tags
