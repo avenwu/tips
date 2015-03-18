@@ -15,6 +15,8 @@ git push origin -u localBranchName:remoteBranchName
 #4.Create local tag and push to remote
 git tag tagName
 git push origin tagName
+#Create tag with annotated comments
+git tag -a v1.4 -m 'my version 1.4'
 
 #5.Diff between branches
 git diff master..branch
