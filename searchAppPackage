@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+##################################################################
+##
+##  Search APK location according to the specific package name
+##
+##
+##  Author: Chaobin Wu
+##  Email : me@avenwu.net
+##
+#################################################################
+
+arg0="packageName"
+arg1="directory"
+BASE_NAME=`basename $0`
+
+if [ $# -lt 2 ]; then
+	echo "Usage: $BASE_NAME $arg0 $arg1"
+	exit 1
+fi
+
+keyword=$1
+directory=$2
+
+if [ -d $directory ]; then
+	echo "$directory is set as searching folder"
+else
+	echo "$directory is not a valid directory, use current folder instead"
+	$directory=`pwd`
+fi
+
+# wheather the apk has specific package name
+function isApkHit() {
+	package=$1
+	file=$2
+	extension="${file##*.}"
+	if [ $extension = "apk" ]; then	
+		output=`aapt dump badging $file |grep $package`
+		if [[ $output == *"$package"* ]]; then
+			echo "Found $package in $file"
+			echo $output
+		fi
+	fi
+}
+
+# search recurrsively
+function search(){
+	keywords=$1
+	file=$2
+	if [ -d $file ]; then
+		files=($file/*)
+		for f in "${files[@]}"; do
+			search $keywords $f
+		done
+	elif [ -f $file ]; then
+		isApkHit $keywords $file
+	fi
+}
+
+files=($directory/*)
+for file in "${files[@]}"; do
+	search $keyword $file
+done
+echo "search done"
