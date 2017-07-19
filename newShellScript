@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+##############################################################################
+##
+##  Generate new shell script file according to pre-defined template 
+##
+##
+##  Author: Chaobin Wu
+##  Email : me@avenwu.net
+##
+##############################################################################
+
+arg="script-name"
+if [ $# == 0 ]; then
+	echo "Usage: $0 $arg"
+	exit 1
+fi
+
+scriptName=$1
+echo "Generate new script file: $scriptName"
+if [ -f $scriptName ]; then
+	echo "$scriptName already existed"
+	exit 1
+fi
+
+touch $scriptName & chmod +x $scriptName
+echo '#!/usr/bin/env bash' >> $scriptName
+echo '##################################################################' >> $scriptName
+echo '##' >> $scriptName
+echo '##  Add script description here' >> $scriptName
+echo '##' >> $scriptName
+echo '##' >> $scriptName
+echo '##  Author: Chaobin Wu' >> $scriptName
+echo '##  Email : me@avenwu.net' >> $scriptName
+echo '##' >> $scriptName
+echo '#################################################################' >> $scriptName
+echo 'arg="arg"' >> $scriptName
+echo 'if [ $# == 0 ]; then' >> $scriptName
+echo '	echo "Usage: $0 $arg"' >> $scriptName
+echo '	exit 1' >> $scriptName
+echo 'fi' >> $scriptName
+
+echo "Script generated: $scriptName"
+
